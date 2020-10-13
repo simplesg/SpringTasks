@@ -1,9 +1,12 @@
 package model;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class Footballer {
     private Goalkeeper goalkeeper;
 
-    public void setGoalkeeper(Goalkeeper goalkeeper){
+    public Footballer(Goalkeeper goalkeeper){
         this.goalkeeper = goalkeeper;
     }
 

@@ -1,12 +1,11 @@
 package model;
 
-public class Goalkeeper {
-    private String name = "Messi";
-    private int games = 100;
+import org.springframework.stereotype.Component;
 
-    public int getGames() {
-        return this.games;
-    }
+@Component
+public class Goalkeeper {
+    private String name= "Messi";
+    private int games = 100;
 
     public String getName() {
         return this.name;
