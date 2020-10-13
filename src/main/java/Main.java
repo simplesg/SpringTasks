@@ -8,6 +8,6 @@ public class Main {
                 new AnnotationConfigApplicationContext(SpringConfig.class);
 
         Sportsman sportsman = context.getBean(Sportsman.class);
-        System.out.println(sportsman.getFootballer().getGoalkeeper().getName());
+        System.out.println(sportsman);
     }
 }

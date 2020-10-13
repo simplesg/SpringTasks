@@ -11,22 +11,13 @@ import org.springframework.context.annotation.Configuration;
 @ComponentScan(value = "model")
 public class SpringConfig {
 
-//    @Bean
-//    Sportsman getSportsman(){
-//        Sportsman sportsman = new Sportsman();
-//        sportsman.setFootballer(getFooballer());
-//        return sportsman;
-//    }
-//
-//    @Bean
-//    Footballer getFooballer(){
-//        Footballer footballer = new Footballer();
-//        footballer.setGoalkeeper(getGoalkeeper());
-//        return footballer;
-//    }
-//
-//    @Bean
-//    Goalkeeper getGoalkeeper(){
-//        return new Goalkeeper();
-//    }
+    @Bean
+    Footballer getFooballer(){
+        return new Footballer(getGoalkeeper());
+    }
+
+    @Bean
+    Goalkeeper getGoalkeeper(){
+        return new Goalkeeper();
+    }
 }
