@@ -3,6 +3,7 @@ package config;
 import model.Footballer;
 import model.Goalkeeper;
 import model.Sportsman;
+import model.Team;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
@@ -11,13 +12,18 @@ import org.springframework.context.annotation.Configuration;
 @ComponentScan(value = "model")
 public class SpringConfig {
 
+
     @Bean
-    Footballer getFooballer(){
-        return new Footballer(getGoalkeeper());
+    Footballer getFootballer(){
+        Footballer footballer = new Footballer();
+        footballer.setName("Messi");
+        return footballer;
     }
 
     @Bean
-    Goalkeeper getGoalkeeper(){
-        return new Goalkeeper();
+    Sportsman getSportsman(){
+        Sportsman sportsman = new Sportsman();
+        sportsman.setName("Football");
+        return sportsman;
     }
 }

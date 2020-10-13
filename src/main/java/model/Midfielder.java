@@ -3,26 +3,25 @@ package model;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-@Component("Goalkeeper")
-public class Goalkeeper implements Team{
+@Component("Midfielder")
+public class Midfielder implements Team {
     private final Footballer footballer;
 
     @Autowired
-    public Goalkeeper(Footballer footballer){
+    public Midfielder(Footballer footballer){
         this.footballer = footballer;
     }
 
-    @Override
     public Footballer getFootballer() {
         return this.footballer;
     }
 
     @Override
     public String toString() {
-        int saves = 100;
-        return "Goalkeeper{" +
+        int goals = 100;
+        return "Midfielder{" +
                 "name='" + footballer + '\'' +
-                ", saves=" + saves +
+                ", goals=" + goals +
                 '}';
     }
 }

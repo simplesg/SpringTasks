@@ -5,16 +5,19 @@ import org.springframework.stereotype.Component;
 
 
 public class Footballer {
-    private Goalkeeper goalkeeper;
 
-    @Autowired
-    public Footballer(Goalkeeper goalkeeper){
-        this.goalkeeper = goalkeeper;
+    private String name;
+
+    public String getName() {
+        return name;
     }
 
+    public void setName(String name) {
+        this.name = name;
+    }
 
     @Override
     public String toString(){
-        return "Football : " + goalkeeper.toString();
+        return this.name;
     }
 }

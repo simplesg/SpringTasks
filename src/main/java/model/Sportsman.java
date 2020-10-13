@@ -1,20 +1,26 @@
 package model;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
-@Component
 public class Sportsman {
-
-    private Footballer footballer;
+    private String name;
 
     @Autowired
-    public Sportsman(Footballer footballer) {
-        this.footballer = footballer;
+    @Qualifier("Midfielder")
+    private Team team;
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     @Override
     public String toString(){
-        return "Sport is " + footballer.toString();
+        return "Sport is " + name + "! Position is: " + team;
     }
 }
